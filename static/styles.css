@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.project-title h1 {
+    margin: 0; /* Reset margin for the h1 element */
+}
+
+.title-container {
+    display:flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center;
+    width: 100%; /* Set background to cover half of the page */
+    height: 100vh; /* Cover the full viewport height */
+    padding: 2px;
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(32, 32, 77);
+    color: rgb(243, 242, 240);
+    overflow: hidden; /* Prevent content from overflowing */
+    background-image: url("");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.button-container {
+    margin-top: 20px; /* Adjust this as needed */
+}
+
+#try {
+    background-color: blueviolet;
+    margin-top: 10px;
+}
+
+.project-overview {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Take up full width of container */
+    margin-left:-1%;
+    
+}
+.about-our-project
+{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Take up full width of container */
+    margin-left:-1%;
+
+}
+.meet-our-team
+{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-left: -1%;
+ 
+}
+h3 {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 200%;
+}
+
+p {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.grid
+{
+    margin-left: 5%;
+}
+.g{
+background-color: #16a6ab;
+
+}
+
