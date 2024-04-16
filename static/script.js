@@ -1,26 +1,30 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const tryButton = document.getElementById("try");
-  
-  tryButton.addEventListener("click", function() {
-      const imageInput = document.getElementById("imageInput");
-      imageInput.click();
-  });
-
-  document.getElementById('imageInput').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    const formData = new FormData();
-    formData.append('image', file);
-
-    fetch('http://127.0.0.1:5000/predict', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.blob())
-    .then(result => {
-      const imageUrl = URL.createObjectURL(result);
-      const resultImage = document.getElementById('resultImage');
-      resultImage.src = imageUrl;
-    })
-    .catch(error => console.error('Error:', error));
-  });
+document.getElementById("try").addEventListener("click", function () {
+  window.location.href = "result.html";
 });
+// Optional: Add more texts to the carousel dynamically
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
